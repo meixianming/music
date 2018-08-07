@@ -7,7 +7,7 @@ export const Request = (payload) => {
       params: payload.data
     })
     .then(response => {
-      if (respponse.status === 200) {
+      if (response.status === 200) {
         return response.data;
       }
     })
@@ -15,7 +15,7 @@ export const Request = (payload) => {
       return error;
     })
 }
-export const getBanner = () => {
+export const getBanners = () => {
   return Request({
     url: "/banner"
   })
