@@ -1,6 +1,8 @@
 // initial state
 const state = {
   banners: [],
+  personalized: [],
+  newSong: []
 }
 //getters
 const getters = {};
@@ -17,6 +19,12 @@ const mutations = {
         img: item.picUrl
       }
     })
+  },
+  getPersonalized(state, payload) {
+    state.personalized = payload.result;
+  },
+  getNewSong(state, payload) {
+    state.newSong = payload.result;
   }
 };
 

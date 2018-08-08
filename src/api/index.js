@@ -1,5 +1,8 @@
 import axios from 'axios';
 import qs from 'qs';
+import {
+  request
+} from 'https';
 
 axios.defaults.baseURL = window.location.hostname === 'https://www.baidu.com/' ? 'http://120.79.162.149:3000' : 'http://120.79.162.149:3000';
 export const Request = (payload) => {
@@ -18,5 +21,15 @@ export const Request = (payload) => {
 export const getBanners = () => {
   return Request({
     url: "/banner"
+  })
+}
+export const getPersonalized = () => {
+  return Request({
+    url: "/personalized"
+  })
+}
+export const getNewSong = () => {
+  return Request({
+    url: "/personalized/newsong"
   })
 }
