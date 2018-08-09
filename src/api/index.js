@@ -18,6 +18,8 @@ export const Request = (payload) => {
       return error;
     })
 }
+
+//推荐模块接口
 export const getBanners = () => {
   return Request({
     url: "/banner"
@@ -31,5 +33,12 @@ export const getPersonalized = () => {
 export const getNewSong = () => {
   return Request({
     url: "/personalized/newsong"
+  })
+}
+
+//排名模块
+export const getRankInfo = (idx) => {
+  return Request({
+    url: "/top/list?idx=" + idx
   })
 }
